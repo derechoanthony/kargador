@@ -18,11 +18,14 @@ body,
 	top: 100px;
 }
 #intro {
-	background: url('../img/assets/bg.png')no-repeat center center;
+	background: url('../img/assets/map-bg.jpg')no-repeat center center;
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
 	-o-background-size: cover;
 	background-size: cover;
+}
+.view .full-bg-img {
+	height: 70%;
 }
 .input-group .input-group-text{
     background-color: #2e7d32;
@@ -35,6 +38,12 @@ body,
     position: relative;
     top: -2px;
 }
+.search a{
+	padding: 5px 25px;
+    position: relative;
+    left: 0px;
+    color: #fff;
+}
 .location iframe {
 	position: fixed;
 	/* right:30px; */
@@ -43,8 +52,15 @@ body,
 .trucks .row {
 	align-items: center;
 }
+.trucks .row .col {
+	padding: 20px;
+}
 a {
 	color: #d06927;
+}
+.stars {
+    width: 130px;
+    /* line-height: 1em; */
 }
 .form-inline .form-check {
 	padding-left: 25px;
@@ -56,3 +72,41 @@ a {
 	width: 100%;
     object-fit: contain;
 }
+
+.rating { 
+	border: none;
+	float: left;
+	position: relative;
+    top: -22px;
+    left: -7px;
+  }
+  
+  .rating > input { display: none; } 
+  .rating > label:before { 
+	margin: 5px;
+	font-size: 1.25em;
+	font-family: FontAwesome;
+	display: inline-block;
+	content: "\f005";
+  }
+  
+  .rating > .half:before { 
+	content: "\f089";
+	position: absolute;
+  }
+  
+  .rating > label { 
+	color: #ddd; 
+   float: right; 
+  }
+  
+  /***** CSS Magic to Highlight Stars on Hover *****/
+  
+  .rating > input:checked ~ label, /* show gold star when clicked */
+  .rating:not(:checked) > label:hover, /* hover current star */
+  .rating:not(:checked) > label:hover ~ label { color: #FFD700;  } /* hover previous stars in list */
+  
+  .rating > input:checked + label:hover, /* hover current star when changing rating */
+  .rating > input:checked ~ label:hover,
+  .rating > label:hover ~ input:checked ~ label, /* lighten current selection */
+  .rating > input:checked ~ label:hover ~ label { color: #FFED85;  } 
