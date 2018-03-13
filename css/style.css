@@ -1,0 +1,58 @@
+/* Your custom styles */
+.darken-4 {
+	background: #000!important;
+}
+
+html,
+body,
+#intro{
+	height: 100%;
+}
+.container {
+	height: 100vh;
+	position: relative;
+	top: 100px;
+}
+.container-fluid {
+	position: relative;
+	top: 100px;
+}
+#intro {
+	background: url('../img/assets/bg.png')no-repeat center center;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
+.input-group .input-group-text{
+    background-color: #2e7d32;
+}
+.fa-search {
+	color: #fff;
+}
+.index-btn {
+    /* padding: 10px 20px; */
+    position: relative;
+    top: -2px;
+}
+.location iframe {
+	position: fixed;
+	/* right:30px; */
+	max-width: 50% !important;
+}
+.trucks .row {
+	align-items: center;
+}
+a {
+	color: #d06927;
+}
+.form-inline .form-check {
+	padding-left: 25px;
+}
+.grey-text {
+    color: #df5000!important;
+}
+.single-image .row img{
+	width: 100%;
+    object-fit: contain;
+}
